@@ -81,12 +81,16 @@
 // console.log(typeof prenom1);
 
 class Compte {
-    numero;
-    solde;
 
+    //Constructeur
     constructor(n) {
         this.numero = n;
         this.solde = 50;
+    }
+
+    //Methode
+    crediter(montant) {
+        this.solde += montant;
     }
 }
 
@@ -124,5 +128,17 @@ class Compte {
 
 let compteA = new Compte("001");
 console.log(compteA)
+
+compteA.crediter(5000);
+console.log(compteA);
+
+//JSON = JavaScript Object Notation
+
+let personne = new Object();
+personne.prenom = "Joachim";
+personne.age = 52;
+
+console.log(personne);
+
 
 
